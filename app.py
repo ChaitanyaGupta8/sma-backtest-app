@@ -4,7 +4,6 @@ import yfinance as yf
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Reuse your existing function
 def back_test_sma_strategy(ticker, start_date, end_date, short_window=50, long_window=200, plot=True, priceplot=True):
     data = yf.download(ticker, start=start_date, end=end_date)
 
@@ -65,7 +64,7 @@ def back_test_sma_strategy(ticker, start_date, end_date, short_window=50, long_w
         ax2.grid(True)
         st.pyplot(fig2)
 
-# Streamlit UI
+# Streamlit UI code
 st.title("SMA Crossover Strategy Backtester")
 
 ticker = st.text_input("Ticker Symbol", value='AAPL')
